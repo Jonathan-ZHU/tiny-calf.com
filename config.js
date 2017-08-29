@@ -86,7 +86,7 @@ config = {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blog's published URL.
         //url: 'http://47.93.13.76',
-        url: 'http://www.tiny-calf.com',
+        url: 'http://127.0.0.1',
         //url: 'http://blog.smallpotato.top/',
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
@@ -115,10 +115,10 @@ config = {
         database: {
             client: 'mysql',
             connection: {
-                host     : 'localhost',
-                user     : 'root',
-                password : '',
-                database : 'ghost',
+                host     : '47.93.13.76',
+                user     : 'Jonathan',
+                password : '77e7c96a',
+                database : 'ghost-test',
                 charset  : 'utf8'
             },
             debug: false
