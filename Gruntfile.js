@@ -74,10 +74,9 @@ var _              = require('lodash'),
             watch: {
                 livereload: {
                     files: [
-                        'content/themes/roon-zh/assets/css/*.css',
-                        'content/themes/roon-zh/assets/js/*.js',
+                        'content/themes/casper/assets/css/*.css',
+                        'content/themes/casper/assets/js/*.js',
                         'core/built/assets/*.js',
-                        'core/built/assets/*.css',
                         'core/client/dist/index.html'
                     ],
                     options: {

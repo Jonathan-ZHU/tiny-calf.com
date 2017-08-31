@@ -22,14 +22,9 @@ asset = function (context, options) {
 
     if (!context.match(/^favicon\.ico$/) && !context.match(/^shared/) && !context.match(/^asset/)) {
         if (isAdmin) {
-            //output += 'ghost/';
-            output += 'core/built/assets/';
+            output += 'ghost/';
         } else {
-            //output += 'assets/';
-            //output += 'content/themes/casper-zh/assets/';
-            //output += 'content/themes/ghostium-master/assets/';
-            //output += 'content/themes/roon-zh/assets/';
-            output += 'content/themes/kaldorei/assets/';
+            output += 'assets/';
         }
     }
 
