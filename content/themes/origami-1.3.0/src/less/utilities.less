@@ -1,0 +1,95 @@
+/* Clears shit */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* Hides shit */
+.hidden {
+	text-indent: -9999px;
+	visibility: hidden;
+	display: none;
+}
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner {
+	position: relative;
+	width: 80%;
+	max-width: 710px;
+	margin: 0 auto;
+}
+
+/* Centres vertically yo. (IE8+) */
+.vertical {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* Wraps the main content & footer */
+.site-wrapper {
+	position: absolute;
+	z-index: 10;
+	left: 360px;
+	right: 0;
+	min-height: 100%;
+	background: @content-background;
+	-webkit-transition: -webkit-transform 0.5s ease;
+	transition: transform 0.5s ease;
+}
+
+.grid-item {
+	display: inline-block;
+}
+
+.skew(@angle){
+	.skew(@angle, 0);
+}
+
+.skew(@angle, @angle2){
+	transform: skew(@angle, @angle2);
+	-webkit-transform: skew(@angle, @angle2);
+	-moz-transform: skew(@angle, @angle2);
+	-o-transform: skew(@angle, @angle2);
+}
+
+.blur(@r){
+	filter: blur(@r);
+	-o-filter: blur(@r);
+	-moz-filter: blur(@r);
+	-webkit-filter: blur(@r);
+}
+
+.centerize{
+	transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.skew-n-centerize(@angle, @angle2){
+	transform: translate(-50%, -50%) skew(@angle, @angle2);
+	-webkit-transform: translate(-50%, -50%) skew(@angle, @angle2);
+	-moz-transform: translate(-50%, -50%) skew(@angle, @angle2);
+	-o-transform: translate(-50%, -50%) skew(@angle, @angle2);
+}
+
+.show-on-tablet-down {
+	display: none;
+}
+
+.force-link {
+	cursor: pointer;
+}
+
+.for(@i, @n) {.-each(@i)}
+.for(@n)     when (isnumber(@n)) {.for(1, @n)}
+.for(@i, @n) when not (@i = @n)  {
+	.for((@i + (@n - @i) / abs(@n - @i)), @n);
+}
+
+.for(@array)   when (default()) {.for-impl_(length(@array))}
+.for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
+.for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}

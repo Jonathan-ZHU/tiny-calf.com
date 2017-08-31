@@ -1,0 +1,47 @@
+/* this is the style add by lius
+ * the element should all prefixed by "lius"
+ */
+
+
+.row{
+    overflow:hidden;
+}
+
+#lius-toc {
+    /*background:url("../bkground/bk1.jpg");*/
+    float:top;
+}
+@media screen and (max-width:500px) {
+    #lius-toc {
+        display:none;
+    }
+}
+#lius-article {
+    float:right;
+}
+
+.lius-site-head {
+
+    background: #222 no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.lius-index-card {
+    height:100px;
+}
+
+.lius-page-card {
+    height:50px;
+}
+.lius-img {
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    margin:0 auto;
+}
+
+#lius-toc {
+   
+}

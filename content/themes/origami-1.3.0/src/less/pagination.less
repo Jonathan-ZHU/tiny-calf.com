@@ -1,0 +1,68 @@
+/* The main wrapper for our pagination links */
+.pagination {
+	position: relative;
+	margin: 4rem auto;
+	font-family: @font-title;
+	font-size: 1.3rem;
+	background: @background-tip;
+	height: 200px;
+	text-align: center;
+}
+
+.pagination-wrapper {
+	display: block;
+	font-size: 3rem;
+	text-decoration: none;
+	position: relative;
+	padding: 12px;
+	height: 60px;
+	width: 100px;
+	margin: 6px auto;
+	top: 80px;
+
+	&:before, &:after {
+		content: '';
+		background: @background;
+		width: 62px;
+		height: 60px;
+		position: absolute;
+		top: 0;
+		transition: all .5s ease;
+	}
+
+	&:before {
+		left: 0;
+		.skew(0deg, 20deg);
+	}
+
+	&:after {
+		right: 0;
+		.skew(0deg, -20deg);
+	}
+
+	&:hover {
+		&:after, &:before {
+			background: @foreground;
+		}
+	}
+}
+
+.page-number {
+	display: inline-block;
+	position: relative;
+	padding: 2px 0;
+	min-width: 100px;
+	color: @post-background;
+	font-family: @font-title;
+	font-size: 15px;
+	z-index: 22;
+}
+
+.older-posts:hover {
+	color: #889093;
+}
+
+/* On page2+ make all the headers smaller */
+.paged .main-header {
+	max-height: 30vh;
+}
